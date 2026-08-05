@@ -1,6 +1,15 @@
 #!/bin/bash
 set -euo pipefail
-
+# Warning: Its not production ready its just a draft created by chatgpt. Do not use it.
+# Changes:
+#
+#✅ Detects clamd@scan.service or clamd.service
+#✅ Fixes LocalSocket reliably
+#✅ Uses detected ClamAV service everywhere
+#✅ Fixes clamav-inotify.service dependency
+#✅ Adds ClamAV socket health test
+#✅ Works with AlmaLinux 9 + CWP variations
+#
 LOG_DIR="/var/log/clamav"
 LOG_FILE="$LOG_DIR/setup.log"
 CLAMD_CONF="/etc/clamd.d/scan.conf"
